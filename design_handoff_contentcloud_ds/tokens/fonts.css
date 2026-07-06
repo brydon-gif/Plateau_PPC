@@ -1,6 +1,0 @@
-/* ContentCloud — Webfonts
-   Headings: Jura (geometric, rounded, technical)
-   Body/UI: Source Sans 3 (humanist, legible)
-   Loaded from Google Fonts. If self-hosting is required, drop the .woff2
-   files into assets/fonts/ and replace this @import with @font-face rules. */
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
