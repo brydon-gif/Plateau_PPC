@@ -1,0 +1,40 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Cards" subtitle="Feature, inset, dark & quote" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--cc-gray-50)}
+  #root{padding:22px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+</style>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  function findNs(name){for(const k in window){try{const v=window[k];if(v&&typeof v==='object'&&v[name])return v;}catch(e){}}return null;}
+  const NS = findNs('Card') || {};
+  const { Card, QuoteCard } = NS;
+  function Demo(){
+    if(!Card) return React.createElement('div',{style:{color:'#D02807',fontFamily:'monospace'}},'Card not found in bundle');
+    return (
+      <div className="grid">
+        <Card icon={'\uD83D\uDCC4'} title="Capture and connect sources" hoverable>
+          Bring in the content and context that matter, from documents to work signals.
+        </Card>
+        <Card tone="dark" eyebrow="Now in pilot" title="Meet CCBot">
+          Turns large document collections into fast, multilingual Q&amp;A with citations.
+        </Card>
+        <Card tone="inset" title="Ensure compliance">
+          Every answer includes precise citations to source documents for auditability.
+        </Card>
+        <QuoteCard
+          quote="CCBot can help multilingual teams query large document collections with more confidence."
+          label="Multilingual knowledge access" />
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

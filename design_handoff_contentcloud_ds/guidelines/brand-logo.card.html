@@ -1,0 +1,18 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Logo mark" subtitle="Hexagonal interlocking C — on light & dark" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--cc-white)}
+  .row{display:flex;gap:16px;padding:22px;align-items:stretch}
+  .cell{flex:1;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;gap:12px;padding:22px}
+  .dark{background:var(--cc-surface-dark);border-color:transparent}
+  .word{font-family:var(--font-heading);font-weight:600;font-size:22px;color:var(--cc-ink);letter-spacing:-.01em}
+  .word.on{color:var(--cc-white)}
+  .cap{position:absolute}
+</style></head>
+<body>
+  <div class="row">
+    <div class="cell"><img src="../assets/logo-mark.svg" height="42"><span class="word">ContentCloud</span></div>
+    <div class="cell dark"><img src="../assets/logo-mark-white.svg" height="42"><span class="word on">ContentCloud</span></div>
+    <div class="cell" style="flex:.5;flex-direction:column;gap:10px"><img src="../assets/logo-mark.svg" height="48"><span style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted)">mark only</span></div>
+  </div>
+</body></html>

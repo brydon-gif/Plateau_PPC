@@ -1,0 +1,26 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Dark surface" subtitle="CCBot widget / footer accents" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--cc-white)}
+  .row{display:flex;gap:14px;padding:20px;align-items:stretch}
+  .panel{flex:1.4;background:var(--cc-surface-dark);border-radius:var(--radius-lg);padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+  .panel h4{margin:0;font-family:var(--font-heading);color:var(--cc-white);font-weight:600;font-size:16px}
+  .panel p{margin:0;color:var(--cc-on-dark-muted);font-size:13px}
+  .raise{margin-top:6px;align-self:flex-start;background:var(--cc-surface-dark-2);border:1px solid rgba(255,255,255,.08);color:var(--cc-on-dark);font-size:12px;padding:6px 10px;border-radius:6px}
+  .sw{flex:1;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-subtle)}
+  .chip{height:74px}
+  .meta{padding:8px 10px}
+  .name{font-family:var(--font-heading);font-weight:600;font-size:12px;color:var(--cc-ink)}
+  .hex{font-family:var(--font-mono);font-size:10px;color:var(--text-muted)}
+</style></head>
+<body>
+  <div class="row">
+    <div class="panel">
+      <h4>Surface dark</h4>
+      <p>Text on dark uses gray-100; muted uses gray-400.</p>
+      <span class="raise">Raised element · #1B2333</span>
+    </div>
+    <div class="sw"><div class="chip" style="background:var(--cc-surface-dark)"></div><div class="meta"><div class="name">Dark</div><div class="hex">#121827</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--cc-surface-dark-2)"></div><div class="meta"><div class="name">Dark raised</div><div class="hex">#1B2333</div></div></div>
+  </div>
+</body></html>

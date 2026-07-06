@@ -1,0 +1,41 @@
+/* ContentCloud — Typography tokens
+   Display/headings set in Jura (geometric sans, wide + rounded, slightly technical).
+   Body & UI set in Source Sans 3. Headings run at their natural weight (400–600);
+   Jura reads bold at 500/600, so avoid pushing it to 700 except for very large display. */
+:root {
+  /* ---- Families ---- */
+  --font-heading: 'Jura', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body:    'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    ui-monospace, 'SFMono-Regular', 'Menlo', monospace;
+
+  /* ---- Weights ---- */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* ---- Type scale (px) — landing-page rhythm ----
+     Site runs very large display (h1 ~72). These are the working tokens. */
+  --fs-display:  clamp(44px, 5.5vw, 72px); /* hero H1 */
+  --fs-h1:       clamp(36px, 4vw, 52px);
+  --fs-h2:       clamp(30px, 3vw, 40px);   /* section titles */
+  --fs-h3:       24px;
+  --fs-h4:       20px;
+  --fs-lead:     20px;                      /* hero / section intro paragraph */
+  --fs-body:     17px;
+  --fs-sm:       15px;
+  --fs-xs:       13px;
+  --fs-eyebrow:  13px;                      /* red overline label */
+
+  /* ---- Line heights ---- */
+  --lh-tight:    1.05;  /* large display */
+  --lh-heading:  1.15;
+  --lh-snug:     1.35;
+  --lh-body:     1.6;
+
+  /* ---- Letter spacing ---- */
+  --ls-display:  -0.01em;
+  --ls-tight:    -0.005em;
+  --ls-eyebrow:  0.08em;   /* uppercase overlines */
+  --ls-normal:   0;
+}

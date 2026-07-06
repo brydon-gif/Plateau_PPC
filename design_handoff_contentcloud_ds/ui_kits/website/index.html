@@ -1,0 +1,253 @@
+<!-- @dsCard group="Website" viewport="1280x760" name="Home page" subtitle="Full ContentCloud homepage recreation" -->
+<!-- @startingPoint section="Marketing" subtitle="ContentCloud landing page" viewport="1280x760" -->
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ContentCloud — Home</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);color:var(--text-body);background:var(--cc-white)}
+  .container{max-width:var(--container);margin:0 auto;padding:0 24px}
+  .section{padding:var(--section-y) 0}
+  h2.title{font-family:var(--font-heading);font-weight:500;font-size:clamp(30px,3.4vw,42px);line-height:1.1;color:var(--cc-ink);margin:0;letter-spacing:-.01em}
+  .lead{font-size:19px;line-height:1.55;color:var(--cc-gray-600)}
+  .center{text-align:center}
+  .center .lead{margin-left:auto;margin-right:auto;max-width:680px}
+  a{color:inherit}
+</style>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  function findNs(name){for(const k in window){try{const v=window[k];if(v&&typeof v==='object'&&v[name])return v;}catch(e){}}return null;}
+  const N = {};
+  ['Navbar','Footer','Button','Card','QuoteCard','Badge','Eyebrow','TrustBadge','Stat','FeatureList','FaqItem','ComparisonTable']
+    .forEach(n => { const ns = findNs(n); if(ns) N[n]=ns[n]; });
+  const { Navbar, Footer, Button, Card, QuoteCard, Eyebrow, TrustBadge, Stat, FeatureList, FaqItem, ComparisonTable } = N;
+  const LOGO='../../assets/logo-mark.svg';
+
+  function Hero(){
+    return (
+      <section style={{position:'relative',background:'var(--cc-gray-100)',overflow:'hidden'}}>
+        <img src={LOGO} aria-hidden="true" style={{position:'absolute',right:'-3%',top:'50%',transform:'translateY(-50%)',height:520,opacity:.05,pointerEvents:'none'}}/>
+        <div className="container" style={{padding:'96px 24px 104px',position:'relative'}}>
+          <div style={{maxWidth:640}}>
+            <h1 style={{margin:0,fontFamily:'var(--font-heading)',fontWeight:500,fontSize:'clamp(40px,5vw,66px)',lineHeight:1.05,letterSpacing:'-.01em',color:'var(--cc-ink)'}}>
+              Secure and compliant <span style={{color:'var(--cc-red)'}}>enterprise AI solutions</span> for Europe
+            </h1>
+            <p className="lead" style={{marginTop:22,maxWidth:560}}>
+              ContentCloud is a growing ecosystem of AI tools that empowers EU institutions and businesses to
+              extract insights from corporate content and data, and transform them into actionable knowledge.
+            </p>
+            <div style={{marginTop:30,display:'flex',gap:14,alignItems:'center'}}>
+              <Button variant="primary" size="lg">Explore products</Button>
+              <Button variant="link" size="lg">Talk to us</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  function TrustBand(){
+    const items=[
+      {icon:'\uD83C\uDDEA\uD83C\uDDFA',title:'EU Data Residency',description:'All data processed within EU borders'},
+      {icon:'\uD83D\uDD12',title:'Security-aligned Practices',description:'Controls aligned to enterprise requirements'},
+      {icon:'\uD83D\uDEE1\uFE0F',title:'GDPR Compliant',description:'Full compliance with EU privacy regulations'},
+      {icon:'\uD83D\uDD10',title:'End-to-End Encryption',description:'TLS 1.3 in transit, AES-256 at rest'},
+      {icon:'\u2705',title:'Trust Review Ready',description:'Security & governance details on request'},
+      {icon:'\uD83C\uDFDB\uFE0F',title:'Public Sector Ready',description:'Designed for EU institutions and government'},
+    ];
+    return (
+      <section style={{background:'var(--cc-gray-50)',borderTop:'1px solid var(--border-subtle)',borderBottom:'1px solid var(--border-subtle)'}}>
+        <div className="container" style={{padding:'56px 24px'}}>
+          <Eyebrow>Built for European requirements</Eyebrow>
+          <h2 className="title" style={{marginTop:8,fontSize:28}}>Enterprise-grade security and compliance</h2>
+          <div style={{marginTop:28,display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:14}}>
+            {items.map((it,i)=><TrustBadge key={i} href="#" {...it}/>)}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  function Ecosystem(){
+    return (
+      <section className="section container">
+        <div style={{maxWidth:760}}>
+          <h2 className="title">One ecosystem, two products available today</h2>
+          <p className="lead" style={{marginTop:16}}>
+            CCBot, our intelligent assistant for cited answers across documents and sites, and Memory
+            for private recall, team memory, and governed knowledge sharing.
+          </p>
+        </div>
+        <div style={{marginTop:36,display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:18}}>
+          <Card icon={'\uD83E\uDDE0'} title="Capture and preserve context" hoverable
+            footer={<Button variant="link">Explore Memory product</Button>}>
+            Memory helps teams retain work context across devices and channels, keeping raw activity private by default.
+          </Card>
+          <Card icon={'\uD83D\uDD0D'} title="Search trusted knowledge" hoverable
+            footer={<Button variant="link">Explore CCBot assistant</Button>}>
+            CCBot turns large document collections and websites into fast, multilingual Q&amp;A with citations.
+          </Card>
+          <Card icon={'\u2699\uFE0F'} title="Grow into governed operations" hoverable
+            footer={<Button variant="link">See Resources</Button>}>
+            ContentCloud connects private capture, organizational memory, and reusable knowledge workflows.
+          </Card>
+        </div>
+      </section>
+    );
+  }
+
+  function ProductSpotlight(){
+    return (
+      <section style={{background:'var(--cc-gray-50)',borderTop:'1px solid var(--border-subtle)'}}>
+        <div className="container section" style={{display:'grid',gridTemplateColumns:'1.1fr .9fr',gap:56,alignItems:'center'}}>
+          <div>
+            <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:14}}>
+              <h2 className="title">Meet CCBot</h2>
+              <span style={{fontFamily:'var(--font-heading)',fontWeight:600,fontSize:12,color:'var(--cc-red)',background:'var(--cc-red-tint)',padding:'4px 10px',borderRadius:999}}>Now in pilot</span>
+            </div>
+            <p className="lead" style={{marginBottom:24}}>
+              CCBot ingests vast amounts of data and provides accurate, cited responses by understanding context —
+              with full GDPR compliance.
+            </p>
+            <FeatureList items={[
+              'Natural language understanding and multilingual support',
+              'Full citation support',
+              'Seamless integration with Drupal websites',
+              'GDPR and EU AI Act compliance',
+              'Deployed in EU cloud or on-premise',
+            ]}/>
+            <div style={{marginTop:26}}><Button variant="primary">Get started</Button></div>
+          </div>
+          <Card tone="dark" style={{minHeight:300,justifyContent:'space-between'}}>
+            <div style={{display:'flex',alignItems:'center',gap:8}}>
+              <img src="../../assets/logo-mark-white.svg" height={22}/>
+              <span style={{fontFamily:'var(--font-heading)',fontWeight:600,color:'#fff'}}>CCBot</span>
+              <span style={{marginLeft:'auto',fontSize:12,color:'var(--cc-on-dark-muted)'}}>AI assistant</span>
+            </div>
+            <div style={{margin:'auto 0',textAlign:'center'}}>
+              <div style={{fontFamily:'var(--font-heading)',color:'#fff',fontSize:18,fontWeight:600}}>ContentCloud CCBot</div>
+              <div style={{color:'var(--cc-on-dark-muted)',fontSize:13,marginTop:4}}>Explore ContentCloud products and services</div>
+            </div>
+            <div style={{display:'flex',flexDirection:'column',gap:8}}>
+              <div style={chatChip()}>What is ContentCloud?</div>
+              <div style={chatChip()}>Is CCBot multilingual?</div>
+              <div style={{...chatChip(),display:'flex',justifyContent:'space-between',alignItems:'center',color:'var(--cc-on-dark-muted)'}}>
+                <span>Write a message…</span><span style={{color:'#fff'}}>{'\u2191'}</span>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+    );
+  }
+  function chatChip(){return{background:'var(--cc-surface-dark-2)',border:'1px solid rgba(255,255,255,.08)',borderRadius:8,padding:'11px 14px',fontSize:14,color:'#fff'};}
+
+  function Outcomes(){
+    return (
+      <section className="section">
+        <div className="container center">
+          <h2 className="title">Typical outcomes we target</h2>
+          <p className="lead" style={{marginTop:14}}>Improve discoverability, reduce repetitive information work, and help teams move faster with governed knowledge.</p>
+          <div style={{marginTop:40,display:'flex',justifyContent:'center',gap:56,flexWrap:'wrap'}}>
+            <Stat value="Fewer" label="repetitive information requests"/>
+            <Stat value="Faster" label="knowledge discovery and response time"/>
+            <Stat value="More" label="traceable and reusable outputs"/>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  function UseCases(){
+    return (
+      <section style={{background:'var(--cc-gray-50)',borderTop:'1px solid var(--border-subtle)'}}>
+        <div className="container section">
+          <h2 className="title center">Example use cases</h2>
+          <div style={{marginTop:32,display:'grid',gridTemplateColumns:'1fr 1fr',gap:18}}>
+            <QuoteCard label="EU-facing information access"
+              quote="Public information teams can help users find cited answers across policy content and reports without navigating complex repositories."/>
+            <QuoteCard label="Enterprise knowledge operations"
+              quote="Enterprise teams can reduce repeated internal queries, surface approved knowledge faster, and keep governance closer to the source."/>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  function Compare(){
+    return (
+      <section className="section container">
+        <h2 className="title center">Why choose ContentCloud?</h2>
+        <p className="lead center" style={{marginTop:14,marginBottom:36}}>See how ContentCloud compares to generic AI chatbots and traditional search.</p>
+        <ComparisonTable
+          columns={['ContentCloud','Generic AI Chatbots','Traditional Search']}
+          rows={[
+            {feature:'Source Citations', values:['Always, page-level','Rarely, inaccurate','Links only']},
+            {feature:'Hallucination Risk', values:['Eliminated','High','None, manual']},
+            {feature:'EU Data Residency', values:['✓ Yes','Usually US-based','Depends on provider']},
+            {feature:'GDPR Compliance', values:['Built-in by design','Often non-compliant','Basic only']},
+            {feature:'Multilingual Support', values:['Native cross-lingual','Translation-based','Language-specific']},
+          ]}/>
+      </section>
+    );
+  }
+
+  function Faq(){
+    return (
+      <section style={{background:'var(--cc-gray-50)',borderTop:'1px solid var(--border-subtle)'}}>
+        <div className="container section" style={{maxWidth:820}}>
+          <h2 className="title center" style={{marginBottom:28}}>Frequently asked</h2>
+          <div style={{background:'#fff',border:'1px solid var(--border-subtle)',borderRadius:'var(--radius-xl)',padding:'6px 24px'}}>
+            <FaqItem question="Which sources are supported?" defaultOpen>PDFs and HTML content at launch, including Drupal-backed sources and REST integrations.</FaqItem>
+            <FaqItem question="Can we restrict topics?">Yes — scope CCBot to specific publications or approved content domains with allow/deny lists.</FaqItem>
+            <FaqItem question="How do languages work?">Cross-lingual retrieval; answers in EN/FR/DE/ES/NL by default, more available during design.</FaqItem>
+            <FaqItem question="How does pricing work?">A platform &amp; hosting subscription plus ingestion and usage-based inference.</FaqItem>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  function CtaBand(){
+    return (
+      <section style={{background:'var(--cc-surface-dark)'}}>
+        <div className="container center" style={{padding:'72px 24px'}}>
+          <h2 className="title" style={{color:'#fff'}}>Get started today</h2>
+          <p className="lead" style={{color:'var(--cc-on-dark-muted)',marginTop:14}}>Bring cited retrieval and governed knowledge to your teams.</p>
+          <div style={{marginTop:26,display:'flex',gap:14,justifyContent:'center'}}>
+            <Button variant="danger" size="lg">Book a demo</Button>
+            <Button variant="secondary" size="lg">Sign up</Button>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  function Page(){
+    if(!Navbar) return React.createElement('div',{style:{color:'#D02807',fontFamily:'monospace',padding:24}},'Bundle not loaded');
+    return (
+      <React.Fragment>
+        <Navbar logoSrc={LOGO}/>
+        <Hero/>
+        <TrustBand/>
+        <Ecosystem/>
+        <ProductSpotlight/>
+        <Outcomes/>
+        <UseCases/>
+        <Compare/>
+        <Faq/>
+        <CtaBand/>
+        <Footer logoSrc={LOGO}/>
+      </React.Fragment>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Page/>);
+</script>
+</body></html>

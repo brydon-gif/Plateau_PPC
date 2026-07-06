@@ -1,0 +1,44 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Badges & trust tiles" subtitle="Eyebrow, pills, compliance grid" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--cc-white)}
+  #root{padding:22px}
+  .row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+</style>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  function findNs(name){for(const k in window){try{const v=window[k];if(v&&typeof v==='object'&&v[name])return v;}catch(e){}}return null;}
+  const NS = findNs('Badge') || {};
+  const { Badge, Eyebrow, TrustBadge } = NS;
+  function Demo(){
+    if(!Badge) return React.createElement('div',{style:{color:'#D02807',fontFamily:'monospace'}},'Badge not found in bundle');
+    return (
+      <div>
+        <div className="row">
+          <Eyebrow>Representative use case</Eyebrow>
+        </div>
+        <div className="row">
+          <Badge tone="red">Now in pilot</Badge>
+          <Badge tone="neutral">Multilingual</Badge>
+          <Badge tone="success">GDPR</Badge>
+          <Badge tone="dark">Enterprise</Badge>
+          <Badge tone="outline">On-premise</Badge>
+        </div>
+        <div className="grid">
+          <TrustBadge icon={'\uD83C\uDDEA\uD83C\uDDFA'} title="EU Data Residency" description="All data processed within EU borders" href="#" />
+          <TrustBadge icon={'\uD83D\uDD12'} title="Security-aligned" description="Governance aligned to enterprise needs" href="#" />
+          <TrustBadge icon={'\uD83D\uDEE1\uFE0F'} title="GDPR Compliant" description="Full compliance with EU privacy law" href="#" />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

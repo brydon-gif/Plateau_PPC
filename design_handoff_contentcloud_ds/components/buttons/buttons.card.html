@@ -1,0 +1,47 @@
+<!-- @dsCard group="Components" viewport="700x210" name="Buttons" subtitle="Variants, sizes, states" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--cc-white)}
+  #root{padding:24px}
+  .row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+  .lbl{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);width:74px;flex:none}
+</style>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  function findNs(name){for(const k in window){try{const v=window[k];if(v&&typeof v==='object'&&v[name])return v;}catch(e){}}return null;}
+  const NS = findNs('Button') || {};
+  const { Button } = NS;
+  const Arrow = () => React.createElement('span',{style:{fontSize:'1.05em'}},'\u2192');
+  function Demo(){
+    if(!Button) return React.createElement('div',{style:{color:'#D02807',fontFamily:'monospace'}},'Button not found in bundle');
+    return (
+      <div>
+        <div className="row"><span className="lbl">variants</span>
+          <Button variant="primary">Get started</Button>
+          <Button variant="secondary">Book a demo</Button>
+          <Button variant="ghost">Learn more</Button>
+          <Button variant="link" iconRight={<Arrow/>}>Read more</Button>
+          <Button variant="danger">Delete</Button>
+        </div>
+        <div className="row"><span className="lbl">sizes</span>
+          <Button size="sm">Small</Button>
+          <Button size="md">Medium</Button>
+          <Button size="lg">Large</Button>
+        </div>
+        <div className="row"><span className="lbl">state</span>
+          <Button disabled>Disabled</Button>
+          <Button variant="secondary" disabled>Disabled</Button>
+          <Button iconRight={<Arrow/>}>With icon</Button>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

@@ -1,0 +1,38 @@
+/* ContentCloud — Spacing, radius & layout tokens
+   Base unit 4px (Tailwind-derived). Corner radii are modest: 8px on buttons,
+   6px on inputs, 12–16px on cards and bands. */
+:root {
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Section vertical rhythm */
+  --section-y: clamp(64px, 9vw, 112px);
+
+  /* Radii */
+  --radius-xs:   4px;
+  --radius-sm:   6px;   /* inputs, chips */
+  --radius-md:   8px;   /* buttons */
+  --radius-lg:   12px;  /* cards */
+  --radius-xl:   16px;  /* large panels / bands */
+  --radius-2xl:  24px;
+  --radius-full: 999px;
+
+  /* Content widths */
+  --container:      1200px;
+  --container-prose: 720px;
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px rgba(208, 40, 7, 0.28);
+}

@@ -1,0 +1,29 @@
+<!-- @dsCard group="Components" viewport="1100x300" name="Navbar & Footer" subtitle="Marketing chrome" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--cc-gray-50)}
+</style>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  function findNs(name){for(const k in window){try{const v=window[k];if(v&&typeof v==='object'&&v[name])return v;}catch(e){}}return null;}
+  const NS = findNs('Navbar') || {};
+  const { Navbar, Footer } = NS;
+  function Demo(){
+    if(!Navbar) return React.createElement('div',{style:{color:'#D02807',fontFamily:'monospace',padding:20}},'Navbar not found');
+    return (
+      <div>
+        <Navbar logoSrc="../../assets/logo-mark.svg" />
+        <div style={{height:24}}></div>
+        <Footer logoSrc="../../assets/logo-mark.svg" />
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>
