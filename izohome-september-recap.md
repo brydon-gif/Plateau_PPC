@@ -1,71 +1,114 @@
-# Izohome — September 2026 Performance Recap (vs. August 2026)
+# Izohome - September 2026 Performance (vs. August 2026)
 
-## Account level
-- Spend: €9,285 (Aug) → €9,656 (Sept), +4%
-- Total conversions: 683 → 264, -61%
-- Purchases: 38.7 → 52.0, +34%
-- Purchase value: €19,596 → €16,127, -18%
-- Avg. order value: €507 → €310, -39%
-- Translation: conversion volume collapsed because the junk contact volume collapsed. Purchase count went up. Revenue went down because AOV dropped sharply.
+## Account Level
+- Spend: €9,285 → €9,656 (+4%)
+- Total conversions: 683 → 264 (-61%)
+- Purchases: 38.7 → 52.0 (+34%)
+- Purchase value: €19,596 → €16,127 (-18%)
+- Avg. order value: €507 → €310 (-39%)
 
-## "Sales" campaigns — ecomm ROAS & revenue
-Segment totals (6 campaigns):
-- Spend: €7,527 → €6,813, -9%
-- Purchases: 38.7 → 51.0, +32%
-- Purchase value: €17,470 → €14,356, -18%
+## "Sales" Campaigns - Segment Totals
+- Spend: €7,527 → €6,813 (-9%)
+- Purchases: 38.7 → 51.0 (+32%)
+- Revenue: €17,470 → €14,356 (-18%)
 - ROAS: 2.32 → 2.11
-- Still well short of the 6.0 blended ROAS target
+- Target is 6.0 ROAS
 
-By campaign (Sept spend / purchases / revenue / ROAS — Aug ROAS in brackets):
+## "Sales" Campaigns - By Campaign (September)
+- P AD Colles - FR
+    - Spend: €297
+    - Purchases: 3.6
+    - Revenue: €2,062
+    - ROAS: 6.94 (Aug: 7.54)
+- S AC - PIR isolatieplaten - NL
+    - Spend: €912
+    - Purchases: 8.1
+    - Revenue: €4,875
+    - ROAS: 5.34 (Aug: 8.22)
+- P AB Revêtement - FR
+    - Spend: €1,048
+    - Purchases: 13.6 (Aug: 29.5)
+    - Revenue: €2,136 (Aug: €9,297)
+    - ROAS: 2.04 (Aug: 8.73)
+    - AOV: €157 (Aug: €315)
+- P AC Liquides étanchéité - FR
+    - Spend: €1,819 (Aug: €2,552)
+    - Purchases: 15.5 (Aug: 0.6)
+    - Revenue: €2,853 (Aug: €57)
+    - ROAS: 1.57 (Aug: 0.02)
+- P AC Vloeibare Waterdichting - NL
+    - Spend: €1,825 (Aug: €2,514)
+    - Purchases: 10.3 (Aug: 0)
+    - Revenue: €2,430 (Aug: €0)
+    - ROAS: 1.33 (Aug: 0.00)
+- S AC - Panneaux d'isolation PIR - FR
+    - Spend: €912
+    - Purchases: 0
+    - Revenue: €0
+    - ROAS: 0.00 (Aug: 3.31)
 
-| Campaign | Spend | Purch. | Revenue | ROAS | Aug ROAS |
-|---|---|---|---|---|---|
-| P AD Colles - FR - Sales | €297 | 3.6 | €2,062 | 6.94 | 7.54 |
-| S AC - PIR isolatieplaten - NL - Sales | €912 | 8.1 | €4,875 | 5.34 | 8.22 |
-| P AB Revêtement - FR - Sales | €1,048 | 13.6 | €2,136 | 2.04 | 8.73 |
-| P AC Liquides étanchéité - FR - Sales | €1,819 | 15.5 | €2,853 | 1.57 | 0.02 |
-| P AC Vloeibare Waterdichting - NL - Sales | €1,825 | 10.3 | €2,430 | 1.33 | 0.00 |
-| S AC - Panneaux d'isolation PIR - FR - Sales | €912 | 0.0 | €0 | 0.00 | 3.31 |
+## "Sales" Campaigns - Notes
+- August purchase tracking on the two PMax liquid campaigns was broken (0.6 and 0 purchases on €5,066 spend), so their Aug → Sept ROAS jump is not a clean comparison
+- P AB Revêtement - FR is the one clear decline - flat spend, purchases halved, revenue -77%
+- S AC - Panneaux d'isolation PIR - FR spent €912 with zero purchases - likely the same Merchant Center issue flagged around Sept 16
 
-- The two big PMax liquid-waterproofing campaigns (FR + NL) went from effectively zero tracked purchases in August to 15.5 and 10.3 in September on 28% less spend. Caveat: August purchase tracking in those two campaigns was almost certainly broken (0.6 and 0.0 purchases on €5,066 spend), so the Aug→Sept ROAS lift on them is not a clean read.
-- **P AB Revêtement - FR** is the clearest real decline: flat spend (€1,065 → €1,048), purchases halved (29.5 → 13.6), revenue -77% (€9,297 → €2,136), ROAS 8.73 → 2.04. AOV on it fell €315 → €157.
-- **S AC - Panneaux d'isolation PIR - FR** spent €912 and produced zero purchases in September (3.31 ROAS in August). Needs checking — likely the same Merchant Center / feed issue flagged around Sept 16.
-- **S AC - PIR isolatieplaten - NL** still the strongest volume earner: €4,875 revenue, 5.34 ROAS.
-- **P AD Colles - FR** holds the best ROAS at 6.94 on €297 spend, despite the shopping ads not serving for part of the month.
-
-### Post Sept 21 (YouTube/app placement block)
-- Sales ROAS: 2.02 (Sept 1–20) → 2.31 (Sept 21–30)
+## "Sales" Campaigns - After Sept 21 Placement Block
+- ROAS: 2.02 (Sept 1-20) → 2.31 (Sept 21-30)
 - Purchases: 1.55/day → 2.10/day
-- Spend held roughly flat at €232/day → €216/day
+- Spend: €232/day → €216/day
 
-## "Leads" campaigns — contacts generated
-Segment totals (4 campaigns):
-- Spend: €1,758 → €2,843, +62%
-- Contacts: 24.6 → 34.9, +42%
+## "Leads" Campaigns - Segment Totals
+- Spend: €1,758 → €2,843 (+62%)
+- Total contacts: 24.6 → 34.9 (+42%)
 - Cost per contact: €71.60 → €81.52
 
-| Contact type | Aug | Sept | Change |
-|---|---|---|---|
-| WhatsApp | 11.6 | 25.0 | +117% |
-| Phone | 2.0 | 4.9 | +144% |
-| Email | 3.0 | 3.0 | flat |
-| Lead form submit | 8.0 | 2.0 | -75% |
+## "Leads" Campaigns - Contacts by Type
+- WhatsApp: 11.6 → 25.0 (+117%)
+- Phone: 2.0 → 4.9 (+144%)
+- Email: 3.0 → 3.0 (flat)
+- Lead form submit: 8.0 → 2.0 (-75%)
 
-- All 34.9 September contacts came from the two Roofing campaigns. On identical spend (€1,214 → €1,216) they delivered 19.3 → 34.9 contacts, cost per contact €62.91 → €34.88, -45%.
-- **S AA - Offre Toiture - FR - Leads** spent €877 in September (up from €73 in August) and generated zero contacts and zero conversions of any kind. 
-- **S AA - Dak Offerte - NL - Leads** spent €749 (up from €470) and generated zero contacts — one purchase (€1,772) and nothing else. It produced 5.25 contacts in August.
-- Those two campaigns together are €1,626 — 57% of the leads budget — for zero contacts.
+## "Leads" Campaigns - By Campaign (September)
+- S AD - Roofing NL
+    - Spend: €608
+    - WhatsApp: 14
+    - Phone: 2
+    - Email: 3
+    - Lead form: 2
+    - Total contacts: 21 (Aug: 11.3)
+- S AD - Roofing FR
+    - Spend: €608
+    - WhatsApp: 11
+    - Phone: 2.9
+    - Email: 0
+    - Lead form: 0
+    - Total contacts: 13.9 (Aug: 8.1)
+- S AA - Dak Offerte - NL
+    - Spend: €749 (Aug: €470)
+    - Total contacts: 0 (Aug: 5.3)
+    - 1 purchase at €1,772
+- S AA - Offre Toiture - FR
+    - Spend: €877 (Aug: €73)
+    - Total contacts: 0
+    - Zero conversions of any kind
 
-### Proportional lead value
-Current conversion values in the account are 50 / 15 / 10 / 5 — a lead form submit is worth 10× a WhatsApp message, 3.3× an email, 5× a phone call.
+## "Leads" Campaigns - Notes
+- Every September contact came from the two Roofing campaigns
+- Roofing campaigns on identical spend (€1,214 → €1,216): contacts 19.3 → 34.9, cost per contact €62.91 → €34.88 (-45%)
+- The two S AA campaigns are €1,626 of spend (57% of the leads budget) for zero contacts
+
+## Proportional Lead Value
+- Current conversion values: lead form €50, email €15, WhatsApp €10, phone €5
+- A lead form submit is worth 10x a WhatsApp, 3.3x an email, 5x a phone call
 - September weighted lead value: €419 on €2,843 spend = €0.15 per €1
-- August, re-weighted at the same values for like-for-like: €571 on €1,758 = €0.32 per €1
+- August re-weighted at the same values: €571 on €1,758 spend = €0.32 per €1
 - Roofing campaigns only: €0.37 per €1 (Aug) → €0.34 per €1 (Sept)
-- So: contact volume nearly doubled and cost per contact dropped 45%, but the mix moved toward the cheapest-weighted types (WhatsApp 72% of all September contacts) and away from form submits (8.0 → 2.0). Weighted value per euro was flat-to-slightly-down.
-- Note: August's conversion values were applied inconsistently across campaigns (WhatsApp valued anywhere from €1 to €4.66). The weights look consistent from September onward, so Aug raw value figures aren't comparable without re-weighting.
+- WhatsApp was 72% of all September contacts
+- Lead form submits dropped 8.0 → 2.0, which is what pulled weighted value down despite higher contact volume
+- August conversion values were applied inconsistently across campaigns (WhatsApp valued between €1 and €4.66), so August raw value figures are not comparable without re-weighting
 
 ## Flags for October
-1. Zero purchases on S AC - Panneaux d'isolation PIR - FR despite €912 spend — verify feed/conversion tracking.
-2. €1,626 in the two S AA "offer" leads campaigns returning zero contacts.
-3. AOV down 39% account-wide — worth checking whether the product mix shifted or whether high-AOV purchase tracking is partially missing.
-4. Push the leads campaigns toward form submits, not just WhatsApp volume, given the 10:1 value weighting.
+- Zero purchases on S AC - Panneaux d'isolation PIR - FR despite €912 spend - verify feed and conversion tracking
+- €1,626 in the two S AA campaigns returning zero contacts
+- AOV down 39% account-wide
+- Push leads campaigns toward lead form submits, not just WhatsApp volume, given the 10:1 value weighting
