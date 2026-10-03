@@ -11,6 +11,12 @@ report a single account-wide ROAS as if the two segments were comparable.
 - Segment by conversion action and count **only** `conversion_purchase` value.
   Sales order value = that purchase value. Ecomm ROAS = that purchase value
   divided by cost.
+- Read it from **all conversions**, not primary conversions. Campaigns in this
+  account have had the purchase action sitting outside the primary conversion
+  set for whole months (both PMax liquid campaigns in Aug 2026), so the primary
+  `conversions` / `conversions_value` metrics silently drop real revenue. In
+  GAQL that is `metrics.all_conversions` / `metrics.all_conversions_value`
+  segmented by `segments.conversion_action_name`.
 - Exclude the value of every lead action — `conversion_whatsapp`,
   `conversion_téléphone`, `conversion_mail`, `conversion_form_submit`.
 - Do not use the generic `Conv. value` / `Conv. value / cost` columns for
@@ -33,11 +39,12 @@ report a single account-wide ROAS as if the two segments were comparable.
 
 **How to pull it**
 `query_data` with dimensions `google_ads_campaign_name` +
-`google_ads_conversion_action_name` and metrics `google_ads_conversions` +
-`google_ads_conversions_value`, then keep only the `conversion_purchase` rows
-for the sales segment. Cost comes from a separate campaign-level query —
+`google_ads_conversion_action_name` and metrics `google_ads_all_conversions` +
+`google_ads_all_conversions_value`, then keep only the `conversion_purchase`
+rows for the sales segment. Cost comes from a separate campaign-level query —
 `google_ads_cost_micros` cannot be combined with the conversion-action
-breakdown.
+breakdown. `google_ads.report_query` (raw GAQL) is the more flexible route and
+reaches change history, impression share, search terms and asset groups too.
 
 **Do not try to read the Google Ads custom columns.** Porter's connector does
 not expose them, and `custom_column` is not a GAQL resource
