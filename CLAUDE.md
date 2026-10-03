@@ -8,8 +8,11 @@ Campaign naming encodes the goal. Always split reporting by that goal and never
 report a single account-wide ROAS as if the two segments were comparable.
 
 **Campaigns with "Sales" in the name**
-- Report ecomm ROAS and sales order value using the account's custom
-  columns **"Ecomm ROAS"** and **"Sales Order Value"**.
+- Segment by conversion action and count **only** `conversion_purchase` value.
+  Sales order value = that purchase value. Ecomm ROAS = that purchase value
+  divided by cost.
+- Exclude the value of every lead action — `conversion_whatsapp`,
+  `conversion_téléphone`, `conversion_mail`, `conversion_form_submit`.
 - Do not use the generic `Conv. value` / `Conv. value / cost` columns for
   these campaigns — they mix purchase value with the assigned lead values and
   overstate revenue.
@@ -28,14 +31,19 @@ report a single account-wide ROAS as if the two segments were comparable.
 `conversion_purchase`, `conversion_whatsapp`, `conversion_téléphone`,
 `conversion_mail`, `conversion_form_submit`.
 
-**Known tooling limit:** Porter's Google Ads connector does not expose Google
-Ads custom columns, and the `custom_column` resource is not queryable through
-GAQL (`google_ads.report_query`) — it only lives on
+**How to pull it**
+`query_data` with dimensions `google_ads_campaign_name` +
+`google_ads_conversion_action_name` and metrics `google_ads_conversions` +
+`google_ads_conversions_value`, then keep only the `conversion_purchase` rows
+for the sales segment. Cost comes from a separate campaign-level query —
+`google_ads_cost_micros` cannot be combined with the conversion-action
+breakdown.
+
+**Do not try to read the Google Ads custom columns.** Porter's connector does
+not expose them, and `custom_column` is not a GAQL resource
+(`google_ads.report_query` returns HTTP 400) — it only lives on
 `CustomColumnService.ListCustomColumns`, which no available action reaches.
-Custom columns can only be read via GAQL as `custom_columns[<id>]`, so the
-numeric IDs have to be supplied by hand. Until they are, the closest
-reconstruction is `conversion_purchase` value from the
-`conversion_action_name` breakdown, divided by cost.
+The conversion-action method above is the agreed substitute.
 
 **Report format:** flat bullet points, no tables, minimal commentary between
 figures.

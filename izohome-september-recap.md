@@ -1,5 +1,7 @@
 # Izohome - September 2026 Performance (vs. August 2026)
 
+Sales campaign revenue and ROAS count purchase conversion value only - phone, WhatsApp, email and lead form value excluded.
+
 ## Account Level
 - Spend: €9,285 → €9,656 (+4%)
 - Total conversions: 683 → 264 (-61%)
