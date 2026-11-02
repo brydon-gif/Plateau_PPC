@@ -15,7 +15,7 @@
       "cycle": "next_month",
       "thread_hint": "subject:\"PPC services invoice\" to:achats@cyberimpact.com",
       "amount": "$3000.00 + GST 5% $150 + QST 9.975% $299.25 = $3449.25",
-      "last": { "invoice_no": "0004", "period": "November 2026", "issued": "11/01/2026" },
+      "last": { "invoice_no": "0004", "period": "November 2026", "issued": "11/02/2026" },
       "line_item": "PPC + Meta Ads Monthly Management (<MONTH YEAR>)"
     },
     {
@@ -27,7 +27,7 @@
       "cycle": "next_month",
       "thread_hint": "subject:\"PPC service\" to:datacm.com",
       "amount": "$3000.00 + 13% $390.00 = $3390.00",
-      "last": { "invoice_no": "0004", "period": "November 2026", "issued": "11/01/2026" },
+      "last": { "invoice_no": "0004", "period": "November 2026", "issued": "11/02/2026" },
       "line_item": "PPC Monthly Management for Octacom (<MONTH YEAR>)"
     },
     {
@@ -38,7 +38,7 @@
       "cycle": "prev_month",
       "thread_hint": "to:raphi@tonicblooms.com subject:invoice",
       "amount": "$3000 + HST $390 = $3390.00",
-      "last": { "invoice_no": "0008", "period": "October 2026", "issued": "11/01/2026" },
+      "last": { "invoice_no": "0008", "period": "October 2026", "issued": "11/02/2026" },
       "line_item": "PPC Management Services (no month in the line item; the month lives in the subject)"
     },
     {
@@ -49,7 +49,7 @@
       "cycle": "next_month",
       "thread_hint": "to:maria.gomez@policyme.com subject:invoice",
       "amount": "$5250.00 + HST $682.50 = $5932.50",
-      "last": { "invoice_no": "0013", "period": "November 2026", "issued": "11/01/2026" },
+      "last": { "invoice_no": "0013", "period": "November 2026", "issued": "11/02/2026" },
       "line_item": "PPC Management Services (no month in the line item)"
     }
   ],

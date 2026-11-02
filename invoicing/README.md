@@ -24,8 +24,9 @@ renders, and drafts. No Drive round-trip needed.
 4. **Check in on amounts.** Standing instruction: amounts carry over unchanged, but say so
    explicitly and let Brydon correct before building anything.
 5. **Patch** `templates/<client>/document.xml` with `lib/patch.py`: bump the invoice number,
-   set the date to the 1st, and move the month in the line item. `patch.py` refuses any
-   replacement that does not match exactly one run - a wrong invoice is worse than a crash.
+   set DATE OF ISSUE to **today's date** (see below), and move the month in the line item.
+   `patch.py` refuses any replacement that does not match exactly one run - a wrong invoice
+   is worse than a crash.
 6. **Render** with `lib/render.py` -> ~2KB PDF.
 7. **Draft** with Gmail `create_draft`, replying in the thread where the last invoice was
    sent (`replyToMessageId` = the most recent message in it). Subject:
@@ -37,6 +38,12 @@ renders, and drafts. No Drive round-trip needed.
 9. **Update `clients.json`** with the new invoice numbers and commit.
 10. **Report** to Brydon: client, recipients, invoice number, amount, and anything you
     changed or guessed at.
+
+## Date of issue
+
+Always today's actual date, in `mm/dd/yyyy`. Not the 1st of the month, even when the run is
+meant to happen on the 1st - if the run slips a day, the invoice says the day it was built.
+Google splits the date across two runs (`11` and `/02/2026`), so patch both.
 
 ## Billing cycle
 
